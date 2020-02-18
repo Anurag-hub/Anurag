@@ -21,7 +21,7 @@ class Account{
 		private int deposits;
 		public Savings(int id,String name,int balance,int deposits){
 			super(id,name,balance);
-			this.deposits=deposits;
+			this.deposits=depohttp://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1336sits;
 		}
 		public int getBalance(){
 			return super.balance+this.deposits;
@@ -48,7 +48,7 @@ class Account{
 			int totalBalance=0;
 			
 			for (int i=0;i<emp.length;i++){
-				totalBalance+=emp[i].getBalance();
+				totalBalance+=emp[i].getBalance()
 			}
 			return totalBalance;
 		}
