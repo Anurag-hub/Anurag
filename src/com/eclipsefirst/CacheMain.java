@@ -10,11 +10,12 @@ class Outer{
 			this.value=value;
 			this.timestamp=timestamp;
 		}
+	}
 		
 	private String toString(){
 		return "value is "+this.value+"\n time is "+this.timestamp;
 	}
-}
+
 
 	public void putData(Inner data){
 		h.put(h.size(),data);
