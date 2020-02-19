@@ -1,11 +1,11 @@
 package com.eclipsefirst;
-
+import java.lang.annotation.*;
 class Account{
 	private int id;
 	private String name;
 	private int balance;
 
-	public int Account(int id,String name,int balance){
+	public Account(int id,String name,int balance){
 		this.id=id;
 		this.name=name;
 		this.balance=balance;
@@ -21,13 +21,13 @@ class Account{
 		private int deposits;
 		public Savings(int id,String name,int balance,int deposits){
 			super(id,name,balance);
-			this.deposits=depohttp://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1336sits;
+			this.deposits=deposits;
 		}
 		public int getBalance(){
-			return super.balance+this.deposits;
+			return super.getBalance()+this.deposits;
 		}
 		public String toString(){
-			return super.toString+this.deposits;
+			return super.toString()+this.deposits;
 		}
 	}
 	class Current extends Account{
@@ -37,27 +37,27 @@ class Account{
 			this.credit=credit;
 		}
 		public int getBalance(){
-			return super.balance+this.credit;
+			return super.getBalance()+this.credit;
 		}
 		public String toString(){
-			return super.toString+this.credit;
+			return super.toString()+this.credit;
 		}
 	}
 	public class AccountMain{
-		public int calculateBalance(Employee emp[]){
+		public int calculateBalance(Account emp[]){
 			int totalBalance=0;
 			
 			for (int i=0;i<emp.length;i++){
-				totalBalance+=emp[i].getBalance()
+				totalBalance+=emp[i].getBalance();
 			}
 			return totalBalance;
 		}
 		public static void main(String[] args){
-			Employee e[]=new Employee[4];
+			Account e[]=new Account[4];
 			e[0]=new Savings(1234,"Anurag",8000,1000);
 			e[1]=new Savings(1235,"Anurag",8000,1000);
-			e[2]=new Credit(12376,"Anurag",4000,1000);
-			e[3]=new Credit(1237,"Anurag",4000,1000);
+			e[2]=new Current(12376,"Anurag",4000,1000);
+			e[3]=new Current(1237,"Anurag",4000,1000);
 			AccountMain em=new AccountMain();
 			int result=em.calculateBalance(e);
 			System.out.println(result);

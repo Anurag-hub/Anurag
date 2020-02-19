@@ -1,3 +1,5 @@
+package com.eclipsefirst;
+
 class Ticket
 {   String from,to;
 	int seatNo;

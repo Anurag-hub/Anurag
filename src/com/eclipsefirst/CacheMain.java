@@ -2,7 +2,7 @@ package com.eclipsefirst;
 
 import java.util.*;
 class Outer{
-	public static Hashmap<Integer,InnerCache> h= newHashmap<String,String>();
+	public static HashMap<Integer,Inner> h= new HashMap<Integer,Inner>();
 	class Inner{
 		private String timestamp,value;
 		
