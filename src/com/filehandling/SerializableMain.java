@@ -12,7 +12,7 @@ public class SerializableMain {
     }
     public static Account1 readObject()throws IOException, ClassNotFoundException
     {
-    	File f=new File("D:\\\\normaldir\\\\mno.txt");
+    	File f=new File("D:\\normaldir\\mno.txt");
 		FileInputStream fis=new FileInputStream(f);
 		ObjectInputStream ois=new ObjectInputStream(fis);
 		Account1 ac=(Account1)(ois.readObject());
